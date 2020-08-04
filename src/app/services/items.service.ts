@@ -7,19 +7,19 @@ import { Observable, of } from 'rxjs';
 export class ItemsService {
 
   getItems():Observable<any> {
-    return this.http.get<any>('http://localhost:3000/items');
+    return this.http.get<any>('https://aksh-api-restaurent.herokuapp.com/items');
   }
 
   uploadpic(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/items/upload', data);
+    return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/items/upload', data);
   }
 
   registerItem(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/items/', data);
+    return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/items/', data);
   }
 
   delItem(id:any):Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/items/'+id);
+    return this.http.delete<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id);
   }
 
   constructor(private http: HttpClient) { }

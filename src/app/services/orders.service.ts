@@ -8,16 +8,16 @@ import { Observable, of } from 'rxjs';
 export class OrdersService {
 
   registerOrder(data: any): Observable<any>{
-    return this.http.post<any>('http://localhost:3000/orders/', data);
+    return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/orders/', data);
   }
 
 
   getOrders():Observable<any> {
-    return this.http.get<any>('http://localhost:3000/orders');
+    return this.http.get<any>('https://aksh-api-restaurent.herokuapp.com/orders');
   }
 
   delOrder(id:any):Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/orders/'+id);
+    return this.http.delete<any>('https://aksh-api-restaurent.herokuapp.com/orders/'+id);
   }
 
   constructor(private http: HttpClient) { }

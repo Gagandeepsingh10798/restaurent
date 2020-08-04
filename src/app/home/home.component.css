@@ -1,0 +1,38 @@
+.section1 {
+
+
+  background-image: url('/assets/auth/images/backss.jpg');
+  background-color: black;
+  opacity: 90%;
+}
+
+
+
+.shop {
+
+  background-color: black;
+  color:black;
+  text-align: center;
+  padding:20px;
+
+}
+
+
+
+
+
+
+.section2 {
+margin-top: 50px;
+width:60%;
+margin-left: 20%;
+}
+
+
+.shopnow {
+
+margin-top: 30%;
+margin-left: 45%;
+margin-bottom: 100px;
+
+}

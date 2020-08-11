@@ -10,6 +10,10 @@ export class ItemsService {
     return this.http.get<any>('https://aksh-api-restaurent.herokuapp.com/items');
   }
 
+  getItem(id:any):Observable<any> {
+    return this.http.get<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id);
+  }
+
   uploadpic(data: any): Observable<any> {
     return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/items/upload', data);
   }
@@ -17,6 +21,11 @@ export class ItemsService {
   registerItem(data: any): Observable<any> {
     return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/items/', data);
   }
+
+  updateItem(id:any,data: any): Observable<any> {
+    return this.http.put<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id, data);
+  }
+
 
   delItem(id:any):Observable<any> {
     return this.http.delete<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id);

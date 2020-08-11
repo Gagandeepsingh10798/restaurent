@@ -17,6 +17,12 @@
 
 }
 
+.carousel-caption{
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(16, 17, 17, 0.5);
+  padding: 5%;
+}
 
 
 
@@ -36,3 +42,21 @@ margin-left: 45%;
 margin-bottom: 100px;
 
 }
+
+
+/* .main-slider{
+  height:400px;
+  width: 100%;
+  overflow: hidden;
+} */
+
+.main-slider .carousel-item {
+  height: 500px;
+}
+
+/* .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+} */

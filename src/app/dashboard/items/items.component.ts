@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../../services/items.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -8,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ItemsComponent implements OnInit {
   item_list : any;
-  constructor(private service: ItemsService,private toastr: ToastrService) { }
+  constructor(private service: ItemsService,private toastr: ToastrService, private router: Router) { }
 
  // toaster service call
  showSuccess(data: any) {
@@ -36,6 +37,14 @@ showError(data: any) {
     });
 }
 // delete user
+
+
+//update user
+
+UpdateItem(id:any){
+  console.log(id)
+  this.router.navigate([`dashboard/items/update/${id}`]);
+}
 
 
 

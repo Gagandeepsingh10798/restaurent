@@ -6,29 +6,31 @@ import { Observable, of } from 'rxjs';
 })
 export class ItemsService {
 
+  server_id = "https://aksh-api-restaurent.herokuapp.com";
+
   getItems():Observable<any> {
-    return this.http.get<any>('https://aksh-api-restaurent.herokuapp.com/items');
+    return this.http.get<any>(this.server_id+'/items');
   }
 
   getItem(id:any):Observable<any> {
-    return this.http.get<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id);
+    return this.http.get<any>(this.server_id+'/items/'+id);
   }
 
   uploadpic(data: any): Observable<any> {
-    return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/items/upload', data);
+    return this.http.post<any>(this.server_id+'/items/upload', data);
   }
 
   registerItem(data: any): Observable<any> {
-    return this.http.post<any>('https://aksh-api-restaurent.herokuapp.com/items/', data);
+    return this.http.post<any>(this.server_id+'/items/', data);
   }
 
   updateItem(id:any,data: any): Observable<any> {
-    return this.http.put<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id, data);
+    return this.http.put<any>(this.server_id+'/items/'+id, data);
   }
 
 
   delItem(id:any):Observable<any> {
-    return this.http.delete<any>('https://aksh-api-restaurent.herokuapp.com/items/'+id);
+    return this.http.delete<any>(this.server_id+'/items/'+id);
   }
 
   constructor(private http: HttpClient) { }

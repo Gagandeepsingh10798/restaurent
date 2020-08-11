@@ -110,7 +110,8 @@ data: any;
     if (this.param !== null) {
       this.service.getItem(this.param)
       .subscribe((res) => {
-        this.data = res.data;
+        console.log(res.data[0])
+        this.data = res.data[0];
       });
     }
   }
